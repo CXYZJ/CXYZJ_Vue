@@ -17,8 +17,7 @@
         <transition enter-active-class="rotateInDownRight"
                     leave-active-class="rotateOutDownLeft" @before-enter="before" @after-enter="after">
           <router-view class="animated"></router-view>
-          <!--<login class="animated" v-show="login" :key="1"></login>-->
-          <!--<register class="animated" v-show="register" :key="2"></register>-->
+
         </transition>
       </div>
 
@@ -41,7 +40,18 @@
         register: false
       }
     },
-    // components: {login, register},
+    mounted() {
+      let path = this.$route.path;
+      if (path === '/login&register/login') {
+        this.login = true;
+        this.register = false;
+        this.height.height = '480px'
+      } else {
+        this.login = false;
+        this.register = true;
+        this.height.height = '530px'
+      }
+    },
     methods: {
       before(el) {
         let cssObj = {

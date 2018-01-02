@@ -228,6 +228,9 @@
   .#{$nameSpace}-fade-#{'green'} {
     @include fade(#3CB034);
   }
+  .#{$nameSpace}-fade-#{'orange'} {
+    @include fade(#FF7300);
+  }
 }
 
 @import "effects/background-transitions/back-pulse";
