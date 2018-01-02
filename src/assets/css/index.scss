@@ -1,0 +1,61 @@
+@import url("//at.alicdn.com/t/font_516148_lfap3i16844e7b9.css");
+
+@mixin lump($high:10px,$width:auto) {
+  height: $high;
+  width: $width;
+}
+
+a {
+  text-decoration: none;
+  color: gray;
+}
+
+@mixin my_input() {
+  border: 0;
+  font-size: 14px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.width_20 {
+  display: inline-block;
+  width: 20px;
+  height: auto;
+}
+
+.div_40 {
+  @include lump(40px);
+}
+
+.div_50 {
+  @include lump(50px);
+}
+
+.div_5 {
+  @include lump(5px);
+}
+
+.div_10 {
+  @include lump;
+}
+
+.div_25 {
+  @include lump(25px);
+}
+.div_20 {
+  @include lump(20px);
+}
+.div_30 {
+  @include lump(30px);
+}
+
+
+
+
