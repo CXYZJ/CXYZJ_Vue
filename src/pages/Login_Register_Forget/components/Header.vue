@@ -1,7 +1,7 @@
 <template>
   <div id="head">
     <!--将logo引入-->
-    <img id="icon" src="../../../assets/img/icon.gif"/>
+    <router-link to="/index"><img id="icon" src="../../../assets/img/icon.gif"/></router-link>
   </div>
 </template>
 <script>

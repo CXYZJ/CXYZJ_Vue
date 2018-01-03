@@ -29,5 +29,6 @@
 <style scoped>
   #component {
     min-height: 720px;
+    min-width: 1340px;
   }
 </style>
