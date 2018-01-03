@@ -23,6 +23,27 @@ export default new Router({//实例化一个router路由对象
       children: index_config
     },
     {
+      //文章路由
+      path:'/article',
+
+    },
+    {
+      //论坛路由
+      path:'forum'
+    },
+    {
+      path:'user'
+    },
+    {
+      //介绍路由
+      path:'introduce'
+    },
+    {
+      //学堂路由
+      path:'education',
+
+    },
+    {
       path: '/',
       redirect: '/index'//路由重定向
     }
