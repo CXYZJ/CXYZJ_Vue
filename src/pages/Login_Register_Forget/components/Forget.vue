@@ -149,6 +149,10 @@
 <style lang="scss" scoped>
   @import "../../../assets/css/index";
 
+  * {
+    margin: 0;
+  }
+
   #forget ::-moz-placeholder {
     color: gray;
   }
