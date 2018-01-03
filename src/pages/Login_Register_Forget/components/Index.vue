@@ -17,7 +17,7 @@
 <script>
   import myHeader from './Header'//导入Header组件
   import myMain from './Main'//导入Main1组件
-  import myFooter from '../../../components/foot/myFooter'
+  import myFooter from '../../../components/Footer'
 
   export default {
     name: 'login',//当前组件的名字，没有也无所谓
