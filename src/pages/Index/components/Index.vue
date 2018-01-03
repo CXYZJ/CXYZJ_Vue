@@ -5,10 +5,10 @@
 </template>
 
 <script>
-  import myhead from './Header'
+  import myhead from '../../../components/Header'
 
   export default {
-    name:"index",
+    name: "index",
     components: {
       myhead
     }
@@ -23,8 +23,8 @@
     height: 100%;
     margin: 0 auto;
     position: relative;
-    background-color: gray;
-    min-width: 1000px;
-    min-height: 710px;
+    background-color: rgb(243, 243, 243);
+    min-width: 1340px;
+    min-height: 720px;
   }
 </style>
