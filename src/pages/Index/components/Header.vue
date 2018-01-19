@@ -2,7 +2,7 @@
   <div id="head">
     <el-row>
       <el-col :span="1" :offset="3" id="icon_div">
-        <img id="icon" src="../assets/img/icon.gif"/>
+        <img id="icon" src="../../../assets/img/icon.gif"/>
       </el-col>
       <el-col :span="2" id="compass_index">
         <i id="index_icon" class="iconfont icon-compass">
@@ -17,8 +17,7 @@
       <el-col :span="4" id="user">
         <i id="user_icon" class="iconfont icon-yonghu1">
           <router-link to="/login&register/login" style="font-size: 16px;padding-left: 5px" class="hvr-fade-blue">登录
-          </router-link>.
-
+          </router-link>
           ·
           <router-link to="/login&register/register" href="" style="font-size: 16px" class="hvr-fade-orange">注册
           </router-link>
@@ -28,14 +27,9 @@
     </el-row>
   </div>
 </template>
-
-<script>
-  export default {}
-</script>
-
 <style scoped lang="scss">
+  @import "../../../assets/css/index";
   @import "../assets/css/index";
-  @import "../pages/Index/assets/css/index";
 
   #head /deep/ #icon {
     height: 50px;

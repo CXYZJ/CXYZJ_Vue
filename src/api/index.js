@@ -2,7 +2,7 @@ let axios = require('axios')
 let root = '/api'
 
 function apiAxios(method, url, params, success, failure) {
-
+  console.log(url)
   axios({
     method: method,//提交方式GET,POST,DELETE....
     url: url,
@@ -38,6 +38,7 @@ export default {
     return apiAxios('GET', url, params, success, failure)
   },
   post(url, params, success, failure) {
+    console.log("post")
     return apiAxios('POST', url, params, success, failure)
   },
   put(url, params, success, failure) {

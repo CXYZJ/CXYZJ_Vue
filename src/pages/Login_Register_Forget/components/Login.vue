@@ -31,8 +31,9 @@
 </template>
 
 <script>
-  import {mapMutations} from 'vuex'//导入vuex的辅助类，用于简化mutations方法的调用（新增）
+  import {mapMutations} from 'vuex'
   import third from './Third'
+  import api from '../api/index'
 
   export default {
     name: "login",
@@ -55,18 +56,18 @@
     methods: {
       ...mapMutations(['update_user']),
       submitForm(form) {
+        console.log("method")
 
         this.$refs[form].validate((valid) => {
           if (valid) {
-            this.$api.post('/login', this.login, (data) => {
-              console.log(data.data)
-              console.log('开始 ')
+            console.log("valid")
+            api.login(this.login, (data) => {
+              console.log("success")
               this.update_user(data.data)
-              alert("登录成功！")
-              // this.$router.push({path: '/Index'})//todo 需要修改
+              this.$router.push({path: '/Index'})
             }, (data) => {
-              console.log('failure')
-              this.$message.error(data.statusInfo)
+              console.log("failure")
+              this.$message.error(data.statusInfo.message)
             })
           }
         });
