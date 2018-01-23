@@ -2,9 +2,14 @@ import * as type from '../mutation-type'
 
 const state = {
   user: {
-    id: null,
-    nick_name: null,
-    e_mail: null
+    user_id: null,
+    nickname: null,
+    email: null,
+    head_url: null,
+    is_admin: null,
+    introduce: null,
+    gender: null,
+    bg_url: null
   }
 }
 
@@ -13,10 +18,8 @@ const getters = {
 }
 const mutations = {
   [type.UPDATE_USER](state, user) {
-    state.user.id = user.id
-    state.user.nick_name = user.nick_name
-    state.user.e_mail = user.e_mail
-
+    state.user = user
+    console.log(user)
   }
 }
 

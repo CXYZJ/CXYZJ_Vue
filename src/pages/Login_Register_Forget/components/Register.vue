@@ -1,5 +1,4 @@
 <template>
-
   <el-form id="register" :model="register" status-icon :rules="rules" ref="register">
     <div class="div_30"></div>
     <el-form-item prop="nickname">
@@ -46,6 +45,8 @@
 
 <script>
   import third from './Third'
+  import api from '../api/index'
+  import {mapMutations} from 'vuex'
 
   export default {
     name: "register",
@@ -106,14 +107,19 @@
       }
     },
     methods: {
-      submitForm(name) {
-        console.log(1)
+      ...mapMutations(['update_user']),
+
+      submitForm(name) {/*
         this.$refs[name].validate((valida) => {
           if (valida) {
-            alert('注册成功！')
-            //todo 注册待实现
+            api.register(this.register, (data) => {
+              this.update_user(data.data)
+              this.$router.push({path: '/index'})
+            }, (data) => {
+              this.$message.error(data.statusInfo.message)
+            })
           }
-        })
+        })*/
       }
     },
     components: {third}
@@ -157,7 +163,6 @@
     @include my_input
   }
 
-
   #register #check_pass {
     @include my_input
   }
@@ -171,6 +176,7 @@
     bottom: 0;
     right: 0;
   }
+
   [v-cloak] {
     display: none;
   }
